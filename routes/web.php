@@ -12,3 +12,14 @@
 */
 
 use Illuminate\Http\Request;
+//BOOKS ROUTES
+//Books collection routes
+Route::get('/books', 'BookController@index');
+Route::post('/books', 'BookController@create');
+
+//Books singular route
+Route::get('/books/{id}', 'BookController@show');
+Route::put('/books/{id}', 'BookController@update');
+Route::delete('/books/{id}', 'BookController@destroy');
+
+//Movies collection routes
