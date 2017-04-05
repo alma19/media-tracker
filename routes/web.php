@@ -37,3 +37,12 @@ Route::post('/movies', 'MovieController@create');
 Route::get('/movies/{id}', 'MovieController@show');
 Route::put('/movies/{id}', 'MovieController@update');
 Route::delete('/movies/{id}', 'MovieController@destroy');
+
+//Shows collection routes
+Route::get('/shows', 'ShowController@index');
+Route::post('/shows', 'ShowController@create');
+
+//Shows singular route
+Route::get('/shows/{id}', 'ShowController@show');
+Route::put('/shows/{id}', 'ShowController@update');
+Route::delete('/shows/{id}', 'ShowController@destroy'); 
