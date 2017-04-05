@@ -12,6 +12,13 @@
 */
 
 use Illuminate\Http\Request;
+
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+
 //BOOKS ROUTES
 //Books collection routes
 Route::get('/books', 'BookController@index');
@@ -23,3 +30,10 @@ Route::put('/books/{id}', 'BookController@update');
 Route::delete('/books/{id}', 'BookController@destroy');
 
 //Movies collection routes
+Route::get('/movies', 'MovieController@index');
+Route::post('/movies', 'MovieController@create');
+
+//Movies singular route
+Route::get('/movies/{id}', 'MovieController@show');
+Route::put('/movies/{id}', 'MovieController@update');
+Route::delete('/movies/{id}', 'MovieController@destroy');

@@ -12,8 +12,42 @@ class MovieController extends Controller
     public function index()
     {
       //GET /movies
-      //list 
+      //list
       $movies = Movie::all();
       return Response::json($movies);
+    }
+
+    public function create (Request $request)
+    {
+      //POST /movies
+      //create new movie
+      Movie::create($request->all());
+      return Response::json(['created' => true]);
+    }
+
+    public function show($id)
+    {
+      //GET /movies/$id
+      //show info for a single movie
+      $movie=Movie::find($id);
+      return Response::json($movie);
+    }
+
+    public function update (Request $request, $id)
+    {
+      //PUT /movies/$id
+      // update a single movie
+      $movie=Movie::find($id);
+      $movie->update($request->all());
+      return Response::json(['updated' => true]);
+    }
+
+    public function destroy($id)
+    {
+      //DELETE /movies/$id
+      // remove a single movie
+      $movie = Movie::find($id);
+      $movie->delete();
+      return Response::json(['deleted' => true]);
     }
 }

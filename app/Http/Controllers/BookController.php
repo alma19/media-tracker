@@ -19,7 +19,7 @@ class BookController extends Controller
 
     public function create(Request $request)
     {
-      //POST /Books
+      //POST /books
       //create new book
       Book::create($request->all());
       return Response::json(['created' => true]);
@@ -48,6 +48,6 @@ class BookController extends Controller
       //remove a single book
       $book = Book::find($id);
       $book->delete();
-      return Response::json(['deleted'=> true]); 
+      return Response::json(['deleted'=> true]);
     }
 }
