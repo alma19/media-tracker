@@ -12,7 +12,7 @@ class ShowController extends Controller
     public function index()
     {
       //GET /shows
-      //list
+      // lists out all  of the shows
       $shows = Show::all();
       return Response::json($shows);
     }
@@ -28,7 +28,7 @@ class ShowController extends Controller
     public function show ($id)
     {
       //GET /shows/$id
-      //show info for a single show
+      //lists a single show
       $show=Show::find($id);
       return Response::json($show);
     }

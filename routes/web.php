@@ -15,7 +15,7 @@ use Illuminate\Http\Request;
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 
@@ -45,4 +45,4 @@ Route::post('/shows', 'ShowController@create');
 //Shows singular route
 Route::get('/shows/{id}', 'ShowController@show');
 Route::put('/shows/{id}', 'ShowController@update');
-Route::delete('/shows/{id}', 'ShowController@destroy'); 
+Route::delete('/shows/{id}', 'ShowController@destroy');

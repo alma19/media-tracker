@@ -12,7 +12,7 @@ class BookController extends Controller
     public function index()
     {
       //GET /books
-      //list
+      //list all books
       $books = Book::all();
       return Response::json($books);
     }
@@ -28,7 +28,7 @@ class BookController extends Controller
     public function show ($id)
     {
       //GET /books/$id
-      //show info for a single book
+      //lists a single book
       $book=Book::find($id);
       return Response::json($book);
     }

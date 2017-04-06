@@ -12,7 +12,7 @@ class MovieController extends Controller
     public function index()
     {
       //GET /movies
-      //list
+      //list all movies
       $movies = Movie::all();
       return Response::json($movies);
     }
@@ -28,7 +28,7 @@ class MovieController extends Controller
     public function show($id)
     {
       //GET /movies/$id
-      //show info for a single movie
+      //show a single movie
       $movie=Movie::find($id);
       return Response::json($movie);
     }
