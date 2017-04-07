@@ -27,7 +27,7 @@ class BookController extends Controller
 
     public function show ($id)
     {
-      //GET /books/$id
+      //GET /books/id
       //lists a single book
       $book=Book::find($id);
       return Response::json($book);
@@ -35,7 +35,7 @@ class BookController extends Controller
 
     public function update (Request $request, $id)
     {
-      //PUT /books/$id
+      //PUT /books/id
       // update a single book
       $book = Book::find($id);
       $book->update($request->all());
@@ -44,7 +44,7 @@ class BookController extends Controller
 
     public function destroy($id)
     {
-      //DELETE /books/$id
+      //DELETE /books/id
       //remove a single book
       $book = Book::find($id);
       $book->delete();

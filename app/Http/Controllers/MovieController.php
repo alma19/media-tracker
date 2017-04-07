@@ -27,7 +27,7 @@ class MovieController extends Controller
 
     public function show($id)
     {
-      //GET /movies/$id
+      //GET /movies/id
       //show a single movie
       $movie=Movie::find($id);
       return Response::json($movie);
@@ -35,7 +35,7 @@ class MovieController extends Controller
 
     public function update (Request $request, $id)
     {
-      //PUT /movies/$id
+      //PUT /movies/id
       // update a single movie
       $movie=Movie::find($id);
       $movie->update($request->all());
@@ -44,7 +44,7 @@ class MovieController extends Controller
 
     public function destroy($id)
     {
-      //DELETE /movies/$id
+      //DELETE /movies/id
       // remove a single movie
       $movie = Movie::find($id);
       $movie->delete();

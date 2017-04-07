@@ -27,7 +27,7 @@ class ShowController extends Controller
 
     public function show ($id)
     {
-      //GET /shows/$id
+      //GET /shows/id
       //lists a single show
       $show=Show::find($id);
       return Response::json($show);
@@ -35,7 +35,7 @@ class ShowController extends Controller
 
     public function update (Request $request, $id)
     {
-      //PUT /shows/$id
+      //PUT /shows/id
       // update a single show
       $show = Show::find($id);
       $show->update($request->all());
@@ -44,7 +44,7 @@ class ShowController extends Controller
 
     public function destroy($id)
     {
-      //DELETE /shows/$id
+      //DELETE /shows/id
       //remove a single show
       $show = Show::find($id);
       $show->delete();
