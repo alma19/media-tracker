@@ -22,7 +22,7 @@
 
 
                  <div class="subtitle">
-                  Welcome to the Media Tracker API! With this API, you are able to create a database of books, movies, and TV shows.
+                  Welcome to the Media Tracker API. With this API, you are able to create a database of books, movies, and TV shows.
                 </div>
 
                 <div class="links">
